@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+    mkdocs:
+        build: ./docker/docs
+        container_name: mkdocs-m183
+        volumes:
+            - ./docs:/docs/docs
+            - ./docs/mkdocs.yml:/docs/mkdocs.yml
+        ports:
+            - "13555:8000"

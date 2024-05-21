@@ -1,0 +1,140 @@
+# Project information
+site_name: M183-Doku
+site_url: https://21r8390.github.io/M183-Doku/
+site_author: Manuel Schumacher
+site_description: >-
+    Zusammenfassung über die Theorie vom Modul 183
+
+# Repository
+repo_name: 21r8390/M183-Doku
+repo_url: https://github.com/21r8390/M183-Doku
+edit_uri: https://github.dev/21r8390/M183-Doku/tree/main/docs
+
+# Copyright
+copyright: Copyright &copy; 2024 Manuel Schumacher
+
+# Configuration
+theme:
+    name: material
+    features:
+        - announce.dismiss
+        - content.action.edit
+        - content.action.view
+        - content.code.annotate
+        - content.code.copy
+        - content.tabs.link
+        - content.tooltips
+        # - header.autohide
+        # - navigation.expand
+        - navigation.footer
+        - navigation.indexes
+        - navigation.instant
+        - navigation.instant.progress
+        - navigation.prune
+        - navigation.sections
+        - navigation.tabs
+        # - navigation.tabs.sticky
+        - navigation.top
+        - navigation.tracking
+        - search.highlight
+        - search.share
+        - search.suggest
+        - toc.follow
+        # - toc.integrate
+    palette:
+        - scheme: default
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
+        - scheme: slate
+          primary: indigo
+          accent: indigo
+          toggle:
+              icon: material/brightness-4
+              name: Switch to light mode
+    font:
+        text: Roboto
+        code: Roboto Mono
+    language: de
+    favicon: favicon.svg
+    icon:
+        logo: logo
+
+# Customization
+extra_css:
+    - css/custom.css
+
+# Plugins
+plugins:
+    - search:
+          lang: de
+          separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+    - minify:
+          minify_html: true
+    - social
+    - tags:
+          tags_file: "Tags.md"
+    - offline
+
+# Extensions
+markdown_extensions:
+    - abbr
+    - admonition
+    - attr_list
+    - def_list
+    - footnotes
+    - md_in_html
+    - toc:
+          permalink: true
+    - pymdownx.arithmatex:
+          generic: true
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.details
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink:
+          repo_url_shorthand: true
+          user: 21r8390
+          repo: M183-Doku
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tabbed:
+          alternate_style: true
+          combine_header_slug: true
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.tilde
+
+# Page tree
+nav:
+    - Home:
+          - Start: index.md
+          - Inhaltsverzeichnis: Tags.md
+    - Theorie:
+          - Sicherheitsprinzipien: Theorie/Sicherheitsprinzipien.md
+          - Verschlüsselung: Theorie/Verschluesselung.md
+          - Sicherheitslücken: Theorie/Sicherheitsluecken.md
+          - OpenSSL: Theorie/OpenSSL.md
+    - Praxis:
+          - Passwort Hashing: Praxis/PasswortHashing.md
+          - Json Web Token: Praxis/JsonWebToken.md
+          - Validierung: Praxis/Validierung.md
+          - XSS: Praxis/XSS.md
+          - Error Handling: Praxis/ErrorHandling.md
+          - Logging: Praxis/Logging.md
